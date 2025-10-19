@@ -1,0 +1,23 @@
+# Configuración del sistema de conteo de personas
+
+video_source: 0  # ID de la cámara USB o ruta RTSP
+
+output_dir: "exports"  # carpeta donde se guardan los reportes
+
+# intervalo de exportación en minutos
+interval_minutes: 60
+
+# Línea de conteo definida por dos puntos (x1, y1) y (x2, y2)
+counting_line:
+  - [100, 400]
+  - [540, 400]
+
+# Configuración del detector
+detector:
+  model: "yolov8n"
+  confidence_threshold: 0.5
+
+# Parámetros del tracker
+tracker:
+  max_age: 30
+  n_init: 3
